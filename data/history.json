@@ -1,0 +1,130 @@
+[
+  {
+    "id": "803752b3",
+    "text": "You are so stupid and worthless, nobody likes you",
+    "label": "insult",
+    "severity": "high",
+    "score": 0.974,
+    "time": "2026-10-11 14:56:09"
+  },
+  {
+    "id": "8acf4c06",
+    "text": "how are you",
+    "label": "toxic",
+    "severity": "medium",
+    "score": 0.7,
+    "time": "2026-10-11 14:56:35"
+  },
+  {
+    "id": "626b2cf7",
+    "text": "stupid",
+    "label": "toxic",
+    "severity": "medium",
+    "score": 0.6,
+    "time": "2026-10-11 15:34:10"
+  },
+  {
+    "id": "ac7c1482",
+    "text": "hello",
+    "label": "toxic",
+    "severity": "low",
+    "score": 0.414,
+    "time": "2026-10-11 15:34:37"
+  },
+  {
+    "id": "ffaf298d",
+    "text": "I disagree with you, but thanks for sharing your view",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.133,
+    "time": "2026-10-11 15:35:01"
+  },
+  {
+    "id": "4a4cf828",
+    "text": "hello",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.105,
+    "time": "2026-10-11 15:42:01"
+  },
+  {
+    "id": "81680202",
+    "text": "idiot",
+    "label": "toxic",
+    "severity": "high",
+    "score": 1.0,
+    "time": "2026-10-11 15:42:20"
+  },
+  {
+    "id": "d7ef7b31",
+    "text": "i am sorry",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.012,
+    "time": "2026-10-11 15:42:37"
+  },
+  {
+    "id": "0dbe5e63",
+    "text": "good boy",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.062,
+    "time": "2026-10-11 15:42:55"
+  },
+  {
+    "id": "a0b121ae",
+    "text": "stupid",
+    "label": "toxic",
+    "severity": "high",
+    "score": 1.0,
+    "time": "2026-10-11 15:56:43"
+  },
+  {
+    "id": "815296ac",
+    "text": "idiot",
+    "label": "toxic",
+    "severity": "high",
+    "score": 1.0,
+    "time": "2026-10-11 16:00:40"
+  },
+  {
+    "id": "3ce19975",
+    "text": "good boy",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.062,
+    "time": "2026-10-11 16:13:14"
+  },
+  {
+    "id": "ad14e651",
+    "text": "stupid",
+    "label": "toxic",
+    "severity": "high",
+    "score": 1.0,
+    "time": "2026-10-11 16:13:45"
+  },
+  {
+    "id": "a9d481bf",
+    "text": "You are so stupid and worthless, nobody likes you",
+    "label": "toxic",
+    "severity": "high",
+    "score": 1.0,
+    "time": "2026-10-11 16:14:47"
+  },
+  {
+    "id": "2c9540e2",
+    "text": "I will find you and hurt you after school",
+    "label": "toxic",
+    "severity": "high",
+    "score": 0.878,
+    "time": "2026-10-11 16:15:12"
+  },
+  {
+    "id": "ed4d84e5",
+    "text": "I disagree with you, but thanks for sharing your view",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.019,
+    "time": "2026-10-11 16:15:43"
+  }
+]

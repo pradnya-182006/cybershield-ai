@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · CyberShield AI{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="row"><h2>Analytics Dashboard</h2>
+    <button id="clearHist" class="btn ghost">Clear History</button></div>
+  <div class="grid4">
+    <div class="card kpi"><small>Total Analyzed</small><b id="kTotal">0</b></div>
+    <div class="card kpi"><small>Harmful %</small><b id="kToxic">0%</b></div>
+    <div class="card kpi"><small>High Severity</small><b id="kHigh">0</b></div>
+    <div class="card kpi"><small>Safe %</small><b id="kSafe">0%</b></div>
+  </div>
+  <div class="grid3">
+    <div class="card"><h3>Trend (7 days)</h3><canvas id="trendChart"></canvas></div>
+    <div class="card"><h3>Categories</h3><canvas id="catChart"></canvas></div>
+    <div class="card"><h3>Severity</h3><canvas id="sevChart"></canvas></div>
+  </div>
+  <div class="card">
+    <h3>Recent Activity</h3>
+    <div class="table-wrap"><table id="table">
+      <thead><tr><th>Time</th><th>Comment</th><th>Category</th><th>Severity</th><th>Score</th></tr></thead>
+      <tbody></tbody></table></div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Analyzer · CyberShield AI{% endblock %}
+{% block content %}
+<section class="section narrow">
+  <h2>Comment Analyzer</h2>
+  <div class="card">
+    <textarea id="text" maxlength="1000" placeholder="Type or paste a comment to analyze..."></textarea>
+    <div class="row">
+      <div class="chips">
+        <button class="chip" data-t="You are so stupid and worthless, nobody likes you">Toxic</button>
+        <button class="chip" data-t="I will find you and hurt you after school">Threat</button>
+        <button class="chip" data-t="I disagree with you, but thanks for sharing your view">Safe</button>
+      </div>
+      <span id="counter" class="muted">0 / 1000</span>
+    </div>
+    <div class="row">
+      <button id="analyzeBtn" class="btn primary">Analyze</button>
+      <button id="clearBtn" class="btn ghost">Clear</button>
+    </div>
+  </div>
+
+  <div id="result" class="hidden">
+    <div class="grid2">
+      <div class="card center">
+        <div id="gauge" class="gauge"><div class="gauge-in"><b id="gaugeVal">0%</b><small>toxicity</small></div></div>
+        <div id="verdict" class="verdict"></div>
+        <div id="severity" class="sev"></div>
+        <div id="tags" class="chips"></div>
+      </div>
+      <div class="card">
+        <h3>Category Scores</h3>
+        <div id="bars"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Why was this flagged?</h3>
+      <p id="highlighted" class="hl"></p>
+      <p id="explanation" class="muted"></p>
+    </div>
+
+    <div class="card safe-card">
+      <h3>✨ Safer Rewrite</h3>
+      <p id="rewrite" class="rewrite"></p>
+      <div class="row">
+        <button id="copyBtn" class="btn ghost">Copy</button>
+        <button id="useBtn" class="btn primary">Use this version</button>
+      </div>
+    </div>
+    <p id="disclaimer" class="note"></p>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/analyzer.js') }}"></script>{% endblock %}
