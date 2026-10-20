@@ -33,9 +33,13 @@ async function load() {
       backgroundColor: ['#10B981', '#22D3EE', '#F59E0B', '#F43F5E']}]}, axis);
 
   const h = await (await fetch('/api/history')).json();
-  document.querySelector('#table tbody').innerHTML = h.map(r =>
-    `<tr><td>${r.time}</td><td>${r.text.replace(/</g, '&lt;')}</td><td>${r.label.replace('_', ' ')}</td>
-     <td>${r.severity}</td><td>${Math.round(r.score * 100)}%</td></tr>`).join('') ||
+  document.querySelector('#table tbody').innerHTML = h.map(r => {
+    const isSafeOrUncertain = r.label === 'safe' || r.label === 'uncertain';
+    const scoreVal = isSafeOrUncertain ? 0 : r.score;
+    const labelDisplay = r.label ? r.label.replace('_', ' ') : 'unknown';
+    return `<tr><td>${r.time}</td><td>${r.text.replace(/</g, '&lt;')}</td><td>${labelDisplay}</td>
+     <td>${r.severity}</td><td>${Math.round(scoreVal * 100)}%</td></tr>`;
+  }).join('') ||
     '<tr><td colspan="5">No analyses yet. Try the Analyzer!</td></tr>';
 }
 

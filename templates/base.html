@@ -3,29 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CyberShield AI - Agentic AI cyberbullying detection. Detects toxic, insult, threat, obscene and sarcasm with a 4-stage moderation pipeline.">
   <title>{% block title %}CyberShield AI{% endblock %}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-  <div class="glow g1"></div><div class="glow g2"></div>
-  <nav class="nav">
-    <a href="/" class="brand"><span class="logo">🛡️</span> CyberShield <b>AI</b></a>
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="brand" aria-label="CyberShield AI Home">
+      <span>&#128737;&#65039;</span> CyberShield <b>AI</b>
+    </a>
     <div class="links">
-      <a href="/" class="{{ 'active' if request.path == '/' }}">Home</a>
-      <a href="/analyzer" class="{{ 'active' if request.path == '/analyzer' }}">Analyzer</a>
-      <a href="/dashboard" class="{{ 'active' if request.path == '/dashboard' }}">Dashboard</a>
+      <a href="/" id="nav-home" class="{{ 'active' if request.path == '/' }}">Home</a>
+      <a href="/analyzer" id="nav-analyzer" class="{{ 'active' if request.path == '/analyzer' }}">Analyzer</a>
+      <a href="/dashboard" id="nav-dashboard" class="{{ 'active' if request.path == '/dashboard' }}">Dashboard</a>
     </div>
-    <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">🌙</button>
+    <div class="nav-right">
+      <div class="agent-badge" title="Agentic AI pipeline is active">
+        <span class="agent-dot"></span>
+        Agent v3 Active
+      </div>
+      <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">&#127769;</button>
+    </div>
   </nav>
-
   <main>{% block content %}{% endblock %}</main>
-
-  <footer class="footer">
-    CyberShield AI - Smart Cyberbullying Detection &amp; Prevention System Using NLP
+  <footer class="footer" role="contentinfo">
+    CyberShield AI &mdash; Agentic Cyberbullying Detection &amp; Moderation System &middot; Phase 3
   </footer>
-
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   {% block scripts %}{% endblock %}
 </body>

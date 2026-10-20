@@ -1,54 +1,107 @@
 {% extends "base.html" %}
-{% block title %}Analyzer · CyberShield AI{% endblock %}
+{% block title %}Analyzer &middot; CyberShield AI{% endblock %}
 {% block content %}
 <section class="section narrow">
-  <h2>Comment Analyzer</h2>
-  <div class="card">
-    <textarea id="text" maxlength="1000" placeholder="Type or paste a comment to analyze..."></textarea>
-    <div class="row">
-      <div class="chips">
-        <button class="chip" data-t="You are so stupid and worthless, nobody likes you">Toxic</button>
-        <button class="chip" data-t="I will find you and hurt you after school">Threat</button>
-        <button class="chip" data-t="I disagree with you, but thanks for sharing your view">Safe</button>
+  <h2>&#128269; Comment Analyzer</h2>
+
+  <!-- Input Card -->
+  <div class="card input-card">
+    <textarea id="text" maxlength="1000" placeholder="Type or paste a comment to analyze..." aria-label="Comment input"></textarea>
+    <div class="ctrl-row">
+      <div class="chips-row" role="group" aria-label="Sample comments">
+        <button class="chip" id="sample-toxic" data-t="You are so stupid and worthless, nobody likes you">Toxic</button>
+        <button class="chip" id="sample-threat" data-t="I will find you and make sure you regret opening your mouth">Threat</button>
+        <button class="chip" id="sample-safe" data-t="I disagree with you, but thanks for sharing your view">Safe</button>
+        <button class="chip" id="sample-sarcasm" data-t="Oh fantastic, another mandatory 8 AM meeting that definitely could have been an email">Sarcasm</button>
+        <button class="chip" id="sample-insult" data-t="What a complete loser, constantly crying online because you failed at life">Insult</button>
+        <button class="chip" id="sample-obscene" data-t="What the hell is this absolute bullshit code that you submitted">Obscene</button>
       </div>
-      <span id="counter" class="muted">0 / 1000</span>
+      <span id="counter" class="counter">0 / 1000</span>
     </div>
-    <div class="row">
-      <button id="analyzeBtn" class="btn primary">Analyze</button>
-      <button id="clearBtn" class="btn ghost">Clear</button>
+    <div class="ctrl-row">
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button id="analyzeBtn" class="btn primary">&#128269; Analyze</button>
+        <button id="agentBtn" class="btn ghost">&#129504; Run Agent Pipeline</button>
+        <button id="clearBtn" class="btn ghost btn-sm">Clear</button>
+      </div>
     </div>
   </div>
 
+  <!-- Analysis Result -->
   <div id="result" class="hidden">
-    <div class="grid2">
-      <div class="card center">
-        <div id="gauge" class="gauge"><div class="gauge-in"><b id="gaugeVal">0%</b><small>toxicity</small></div></div>
+    <div class="result-grid">
+      <!-- Left: gauge + verdict -->
+      <div class="card gauge-wrap center">
+        <div id="gauge" class="gauge"><div class="gauge-in"><b id="gaugeVal">0%</b><small>Harmfulness score</small></div></div>
         <div id="verdict" class="verdict"></div>
         <div id="severity" class="sev"></div>
-        <div id="tags" class="chips"></div>
+        <div id="tags" class="tone-tags"></div>
+
+        <!-- Metrics breakdown: Label confidence and Harmfulness score -->
+        <div class="metrics-row">
+          <div class="metric-pill">
+            <span class="metric-lbl">Label confidence</span>
+            <b class="metric-val" id="labelConfVal">0%</b>
+          </div>
+          <div class="metric-pill">
+            <span class="metric-lbl">Harmfulness score</span>
+            <b class="metric-val" id="harmScoreVal">0%</b>
+          </div>
+        </div>
+
+        <p class="muted" style="font-size:.78rem;margin-top:10px">Harmfulness score reflects strongest harmful category (safe is 0%). Label confidence is the predicted category's probability.</p>
       </div>
+      <!-- Right: score bars -->
       <div class="card">
         <h3>Category Scores</h3>
         <div id="bars"></div>
+        <div id="predicted-labels" style="margin-top:14px;display:flex;gap:6px;flex-wrap:wrap"></div>
       </div>
     </div>
 
+    <!-- Flagged words + explanation -->
     <div class="card">
-      <h3>Why was this flagged?</h3>
+      <h3>&#128270; Why was this flagged?</h3>
       <p id="highlighted" class="hl"></p>
-      <p id="explanation" class="muted"></p>
+      <p id="explanation" class="muted" style="font-size:.9rem;margin-top:8px"></p>
     </div>
 
+    <!-- Safer rewrite -->
     <div class="card safe-card">
-      <h3>✨ Safer Rewrite</h3>
+      <h3>&#10024; Safer Rewrite</h3>
       <p id="rewrite" class="rewrite"></p>
       <div class="row">
-        <button id="copyBtn" class="btn ghost">Copy</button>
-        <button id="useBtn" class="btn primary">Use this version</button>
+        <button id="copyBtn" class="btn ghost btn-sm">Copy</button>
+        <button id="useBtn" class="btn primary btn-sm">Use this version</button>
       </div>
     </div>
+
     <p id="disclaimer" class="note"></p>
   </div>
+
+  <!-- Agent Pipeline Panel -->
+  <div id="agentPanel" class="agent-panel hidden">
+    <div class="agent-panel-header">
+      <span>&#129504;</span>
+      <h3>Agentic Moderation Pipeline</h3>
+      <div class="spinner-ring" id="agentSpinner"></div>
+    </div>
+    <div class="agent-running-bar" id="agentBar"></div>
+    <div class="stage-list" id="stageList">
+      <!-- Stages injected by JS -->
+    </div>
+    <div class="agent-summary-bar hidden" id="agentSummaryBar">
+      <div>
+        <div id="agentFinalBadge"></div>
+        <div id="agentFinalDesc" style="font-size:.8rem;color:var(--tx2);margin-top:4px"></div>
+      </div>
+      <div>
+        <div class="agent-timing" id="agentTiming"></div>
+        <div class="agent-disclaimer" id="agentDisclaimer"></div>
+      </div>
+    </div>
+  </div>
+
 </section>
 {% endblock %}
 {% block scripts %}<script src="{{ url_for('static', filename='js/analyzer.js') }}"></script>{% endblock %}

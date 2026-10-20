@@ -126,5 +126,1080 @@
     "severity": "none",
     "score": 0.019,
     "time": "2026-10-11 16:15:43"
+  },
+  {
+    "id": "20d33611",
+    "text": "You are so stupid and worthless, nobody likes you",
+    "label": "toxic",
+    "severity": "high",
+    "score": 1.0,
+    "time": "2026-10-12 11:16:52"
+  },
+  {
+    "id": "655b36d6",
+    "text": "stupid",
+    "label": "toxic",
+    "severity": "high",
+    "score": 1.0,
+    "time": "2026-10-12 12:18:41"
+  },
+  {
+    "id": "16a3ce5a",
+    "text": "I disagree with you, but thanks for sharing your view",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.019,
+    "time": "2026-10-12 12:18:54"
+  },
+  {
+    "id": "a7d0f420",
+    "text": "st***id",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.031,
+    "time": "2026-10-12 12:19:35"
+  },
+  {
+    "id": "edccf3ff",
+    "text": "f***",
+    "label": "obscene",
+    "severity": "high",
+    "score": 0.993,
+    "time": "2026-10-12 12:19:59"
+  },
+  {
+    "id": "7ca1c9d5",
+    "text": "nonsense",
+    "label": "toxic",
+    "severity": "high",
+    "score": 0.941,
+    "time": "2026-10-12 12:20:49"
+  },
+  {
+    "id": "65139724",
+    "text": "gaurav",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.059,
+    "time": "2026-10-12 12:21:04"
+  },
+  {
+    "id": "5eb83fc6",
+    "text": "badekar",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.059,
+    "time": "2026-10-12 12:21:18"
+  },
+  {
+    "id": "ed80f7dc",
+    "text": "sdfu",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.059,
+    "time": "2026-10-12 12:22:22"
+  },
+  {
+    "id": "c78d65cc",
+    "text": "idgf",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.059,
+    "time": "2026-10-12 12:22:30"
+  },
+  {
+    "id": "7588ccc1",
+    "text": "go to hell",
+    "label": "toxic",
+    "severity": "high",
+    "score": 0.997,
+    "time": "2026-10-12 12:22:55"
+  },
+  {
+    "id": "43e26b92",
+    "text": "the heck",
+    "label": "toxic",
+    "severity": "low",
+    "score": 0.522,
+    "time": "2026-10-12 12:23:29"
+  },
+  {
+    "id": "97cc792b",
+    "text": "thank you",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.01,
+    "time": "2026-10-12 12:25:01"
+  },
+  {
+    "id": "6e24c939",
+    "text": "thank u for the cooperation",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.046,
+    "time": "2026-10-12 12:25:44"
+  },
+  {
+    "id": "b62dfe92",
+    "text": "mental illness",
+    "label": "toxic",
+    "severity": "low",
+    "score": 0.502,
+    "time": "2026-10-12 12:27:08"
+  },
+  {
+    "id": "4125c827",
+    "text": "mental illness",
+    "label": "toxic",
+    "severity": "low",
+    "score": 0.502,
+    "time": "2026-10-12 12:27:14"
+  },
+  {
+    "id": "3c469ca3",
+    "text": "mental ihttp://127.0.0.1:5000/llness chatbot",
+    "label": "toxic",
+    "severity": "high",
+    "score": 0.823,
+    "time": "2026-10-12 12:27:34"
+  },
+  {
+    "id": "b96c83ca",
+    "text": "mental",
+    "label": "toxic",
+    "severity": "high",
+    "score": 0.823,
+    "time": "2026-10-12 12:28:20"
+  },
+  {
+    "id": "d444e5b0",
+    "text": ".",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.059,
+    "time": "2026-10-13 11:13:17"
+  },
+  {
+    "id": "cebd5db9",
+    "text": "()",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.059,
+    "time": "2026-10-13 11:13:31"
+  },
+  {
+    "id": "66d22865",
+    "text": "yggy",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.059,
+    "time": "2026-10-19 12:31:03"
+  },
+  {
+    "id": "0c68124f",
+    "text": "bad and good",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.036,
+    "time": "2026-10-19 12:31:23"
+  },
+  {
+    "id": "1af5bd65",
+    "text": "bad",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.363,
+    "time": "2026-10-19 12:31:47"
+  },
+  {
+    "id": "420ebb21",
+    "text": "stupid",
+    "label": "toxic",
+    "severity": "high",
+    "score": 1.0,
+    "time": "2026-10-19 12:32:42"
+  },
+  {
+    "id": "cf94aab5",
+    "text": "toxic",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.1,
+    "time": "2026-10-19 12:33:05"
+  },
+  {
+    "id": "a01f484a",
+    "text": "have a wonderful day my friend",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.025,
+    "time": "2026-10-19 12:33:26"
+  },
+  {
+    "id": "a1b38f3f",
+    "text": "have a wonderful day my friend",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-19 19:55:23"
+  },
+  {
+    "id": "61b69363",
+    "text": "have a wonderful day my friend",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-19 19:57:39"
+  },
+  {
+    "id": "5e9fea2b",
+    "text": "bad",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-19 19:58:00"
+  },
+  {
+    "id": "04694ca6",
+    "text": "toxic",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-19 19:58:18"
+  },
+  {
+    "id": "caf4f1b5",
+    "text": "you are a pathetic ugly freak",
+    "label": "toxic",
+    "severity": "high",
+    "score": 1.0,
+    "time": "2026-10-19 19:59:00"
+  },
+  {
+    "id": "f6ca2170",
+    "text": "you are bad",
+    "label": "toxic",
+    "severity": "medium",
+    "score": 0.715,
+    "time": "2026-10-19 20:01:10"
+  },
+  {
+    "id": "86d5d3c4",
+    "text": "have a wonderful day my friend",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-19 21:11:01"
+  },
+  {
+    "id": "c3717389",
+    "text": "toxic",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-19 21:14:24"
+  },
+  {
+    "id": "b0d5cc1c",
+    "text": "After many years in an abusive relationship, she finally left her husband.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-19 21:15:33"
+  },
+  {
+    "id": "f628eb7a",
+    "text": "The fans yelled abusive comments to the referee",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-19 21:17:07"
+  },
+  {
+    "id": "25e55c89",
+    "text": "The fans yelled abusive comments to the referee",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-19 21:17:18"
+  },
+  {
+    "id": "40373537",
+    "text": "Gossip and rumour can occur both in person and online. Bullies might spread false information about someone, either for their own gain or simply to hurt that person. Regardless of how severe the comme",
+    "label": "toxic",
+    "severity": "low",
+    "score": 0.6,
+    "time": "2026-10-19 21:18:03"
+  },
+  {
+    "id": "0c209a98",
+    "text": "Interesting how certain people still think they\u2019re attractive",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-19 21:21:31"
+  },
+  {
+    "id": "09643385",
+    "text": "You did a fantastic job explaining that topic in our group study session.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 12:15:45"
+  },
+  {
+    "id": "1508daef",
+    "text": "Oh fantastic, another mandatory 8 AM meeting that definitely could have been an email.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 12:15:45"
+  },
+  {
+    "id": "476740c9",
+    "text": "I will find your street and make sure you regret ever opening your mouth.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.987,
+    "time": "2026-10-20 12:15:45"
+  },
+  {
+    "id": "03a4c343",
+    "text": "You did a fantastic job explaining that topic in our group study session.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 12:18:55"
+  },
+  {
+    "id": "73fcd8e0",
+    "text": "Oh fantastic, another mandatory 8 AM meeting that definitely could have been an email.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 12:18:55"
+  },
+  {
+    "id": "81b60e17",
+    "text": "I will find your street and make sure you regret ever opening your mouth.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.987,
+    "time": "2026-10-20 12:18:55"
+  },
+  {
+    "id": "a754f047",
+    "text": "You did a fantastic job explaining that topic in our group study session.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 12:34:03"
+  },
+  {
+    "id": "4b9f37de",
+    "text": "Oh fantastic, another mandatory 8 AM meeting that definitely could have been an email.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 12:34:03"
+  },
+  {
+    "id": "07bda45a",
+    "text": "I will find your street and make sure you regret ever opening your mouth.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.987,
+    "time": "2026-10-20 12:34:03"
+  },
+  {
+    "id": "a28291ad",
+    "text": "Thank you for your wonderful help! Have a great day.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 12:39:31"
+  },
+  {
+    "id": "932ea12e",
+    "text": "You are an absolute idiot and a complete moron.",
+    "label": "insult",
+    "severity": "medium",
+    "score": 0.972,
+    "time": "2026-10-20 12:39:31"
+  },
+  {
+    "id": "733d3ff2",
+    "text": "Oh fantastic, another delayed train, just what my morning needed.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.115,
+    "time": "2026-10-20 12:39:31"
+  },
+  {
+    "id": "0ae0e58d",
+    "text": "I will hunt you down and hurt you.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.975,
+    "time": "2026-10-20 12:39:31"
+  },
+  {
+    "id": "abb70ff6",
+    "text": "Thank you for helping me with this project. I really appreciate it!",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 12:43:17"
+  },
+  {
+    "id": "d2bd22c0",
+    "text": "You are an absolute idiot and nobody takes you seriously.",
+    "label": "insult",
+    "severity": "medium",
+    "score": 0.92,
+    "time": "2026-10-20 12:43:48"
+  },
+  {
+    "id": "f4bbfc22",
+    "text": "I will find you and hurt you.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.916,
+    "time": "2026-10-20 12:44:16"
+  },
+  {
+    "id": "597597ae",
+    "text": "I absolutely love waiting an hour for a five-minute meeting.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 12:44:45"
+  },
+  {
+    "id": "c5070695",
+    "text": "Great job breaking the only thing that was working.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.033,
+    "time": "2026-10-20 12:45:08"
+  },
+  {
+    "id": "b7aef5ff",
+    "text": "What the hell are you talking about?",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 12:45:27"
+  },
+  {
+    "id": "6a904d8a",
+    "text": "What a complete loser, constantly crying online because you failed at life",
+    "label": "insult",
+    "severity": "medium",
+    "score": 0.984,
+    "time": "2026-10-20 12:45:54"
+  },
+  {
+    "id": "04a3d890",
+    "text": "What the hell is this absolute bullshit code that you submitted",
+    "label": "obscene",
+    "severity": "medium",
+    "score": 0.981,
+    "time": "2026-10-20 12:46:00"
+  },
+  {
+    "id": "9eea0f42",
+    "text": "You are an idiot, and I will make you pay for what you did.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.782,
+    "time": "2026-10-20 12:46:27"
+  },
+  {
+    "id": "0faa8a7e",
+    "text": "Haha, you call that a good presentation?",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 12:46:40"
+  },
+  {
+    "id": "8cbca4ae",
+    "text": "I disagree with you, but thanks for sharing your view",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 12:47:18"
+  },
+  {
+    "id": "ad4b474d",
+    "text": "I disagree with you, but thanks for sharing your view",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 12:47:34"
+  },
+  {
+    "id": "3740d4d2",
+    "text": "Great job breaking the only thing that was working.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.033,
+    "time": "2026-10-20 12:54:28"
+  },
+  {
+    "id": "67ef10e7",
+    "text": "You did a fantastic job explaining that topic in our group study session.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 12:59:14"
+  },
+  {
+    "id": "8f34dcbc",
+    "text": "Oh fantastic, another mandatory 8 AM meeting that definitely could have been an email.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 12:59:14"
+  },
+  {
+    "id": "f9c3a418",
+    "text": "I will find your street and make sure you regret ever opening your mouth.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.987,
+    "time": "2026-10-20 12:59:14"
+  },
+  {
+    "id": "1ff2b409",
+    "text": "I absolutely love waiting an hour for a five-minute meeting.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 12:59:14"
+  },
+  {
+    "id": "4246958d",
+    "text": "I will find you and hurt you.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.916,
+    "time": "2026-10-20 12:59:15"
+  },
+  {
+    "id": "f21f2311",
+    "text": "Great job breaking the only thing that was working.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.033,
+    "time": "2026-10-20 12:59:15"
+  },
+  {
+    "id": "d37ebee3",
+    "text": "I absolutely love waiting an hour for a five-minute meeting.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 12:59:15"
+  },
+  {
+    "id": "d0004419",
+    "text": "What the hell are you talking about?",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 12:59:15"
+  },
+  {
+    "id": "56f7e09c",
+    "text": "Haha, you call that a good presentation?",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 12:59:15"
+  },
+  {
+    "id": "79349965",
+    "text": "You did a fantastic job explaining that topic in our group study session.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 13:09:00"
+  },
+  {
+    "id": "55229fb6",
+    "text": "Oh fantastic, another mandatory 8 AM meeting that definitely could have been an email.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 13:09:00"
+  },
+  {
+    "id": "f9038eaf",
+    "text": "I will find your street and make sure you regret ever opening your mouth.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.987,
+    "time": "2026-10-20 13:09:00"
+  },
+  {
+    "id": "a4ecfa58",
+    "text": "I absolutely love waiting an hour for a five-minute meeting.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 13:09:00"
+  },
+  {
+    "id": "962cc51e",
+    "text": "I absolutely love waiting an hour for a five-minute meeting.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 13:09:01"
+  },
+  {
+    "id": "bd1bd1be",
+    "text": "I will find you and hurt you.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.916,
+    "time": "2026-10-20 13:09:01"
+  },
+  {
+    "id": "7bfef66e",
+    "text": "Thank you for your wonderful help! Have a great day.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 13:09:01"
+  },
+  {
+    "id": "731dd8d2",
+    "text": "What the hell are you talking about?",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 13:09:01"
+  },
+  {
+    "id": "bd7b34c8",
+    "text": "I will find you and hurt you.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.916,
+    "time": "2026-10-20 13:09:01"
+  },
+  {
+    "id": "f1085312",
+    "text": "Great job breaking the only thing that was working.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.033,
+    "time": "2026-10-20 13:09:01"
+  },
+  {
+    "id": "345d3e08",
+    "text": "I absolutely love waiting an hour for a five-minute meeting.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 13:09:01"
+  },
+  {
+    "id": "330ba252",
+    "text": "What the hell are you talking about?",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 13:09:01"
+  },
+  {
+    "id": "dabc52f5",
+    "text": "Haha, you call that a good presentation?",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 13:09:01"
+  },
+  {
+    "id": "10d67bde",
+    "text": "I absolutely love waiting an hour for a five-minute meeting.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 13:09:27"
+  },
+  {
+    "id": "897ad16a",
+    "text": "I will find you and hurt you.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.916,
+    "time": "2026-10-20 13:09:27"
+  },
+  {
+    "id": "14bd56ff",
+    "text": "Thank you for your wonderful help! Have a great day.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 13:09:27"
+  },
+  {
+    "id": "6c3fa761",
+    "text": "You did a fantastic job explaining that topic in our group study session.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 13:10:12"
+  },
+  {
+    "id": "50cfa4c8",
+    "text": "Oh fantastic, another mandatory 8 AM meeting that definitely could have been an email.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 13:10:12"
+  },
+  {
+    "id": "9f24983c",
+    "text": "I will find your street and make sure you regret ever opening your mouth.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.987,
+    "time": "2026-10-20 13:10:12"
+  },
+  {
+    "id": "e5681332",
+    "text": "I absolutely love waiting an hour for a five-minute meeting.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 13:10:12"
+  },
+  {
+    "id": "7da975b0",
+    "text": "I absolutely love waiting an hour for a five-minute meeting.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 13:10:12"
+  },
+  {
+    "id": "4234f167",
+    "text": "I will find you and hurt you.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.916,
+    "time": "2026-10-20 13:10:12"
+  },
+  {
+    "id": "610b18f6",
+    "text": "Thank you for your wonderful help! Have a great day.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 13:10:12"
+  },
+  {
+    "id": "745a78e3",
+    "text": "What the hell are you talking about?",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 13:10:12"
+  },
+  {
+    "id": "dcf2ce56",
+    "text": "I will find you and hurt you.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.916,
+    "time": "2026-10-20 13:10:13"
+  },
+  {
+    "id": "c4078ffb",
+    "text": "Great job breaking the only thing that was working.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.033,
+    "time": "2026-10-20 13:10:13"
+  },
+  {
+    "id": "e42361f1",
+    "text": "I absolutely love waiting an hour for a five-minute meeting.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "time": "2026-10-20 13:10:13"
+  },
+  {
+    "id": "572f7f24",
+    "text": "What the hell are you talking about?",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 13:10:13"
+  },
+  {
+    "id": "e9d527fb",
+    "text": "Haha, you call that a good presentation?",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-10-20 13:10:13"
+  },
+  {
+    "id": "c65865a1",
+    "text": "You did a fantastic job explaining that topic in our group study session.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "uncertain": false,
+    "time": "2026-10-20 16:01:28"
+  },
+  {
+    "id": "4b78b8ab",
+    "text": "Oh fantastic, another mandatory 8 AM meeting that definitely could have been an email.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "uncertain": false,
+    "time": "2026-10-20 16:01:28"
+  },
+  {
+    "id": "60714180",
+    "text": "I will find your street and make sure you regret ever opening your mouth.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.987,
+    "uncertain": false,
+    "time": "2026-10-20 16:01:28"
+  },
+  {
+    "id": "95e4f839",
+    "text": "I absolutely love waiting an hour for a five-minute meeting.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "uncertain": false,
+    "time": "2026-10-20 16:01:29"
+  },
+  {
+    "id": "48c6555c",
+    "text": "I absolutely love waiting an hour for a five-minute meeting.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "uncertain": false,
+    "time": "2026-10-20 16:01:29"
+  },
+  {
+    "id": "b8a0e691",
+    "text": "I will find you and hurt you.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.916,
+    "uncertain": false,
+    "time": "2026-10-20 16:01:29"
+  },
+  {
+    "id": "b73669de",
+    "text": "Thank you for your wonderful help! Have a great day.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "uncertain": false,
+    "time": "2026-10-20 16:01:29"
+  },
+  {
+    "id": "d22cd88d",
+    "text": "What the hell are you talking about?",
+    "label": "uncertain",
+    "severity": "none",
+    "score": 0.0,
+    "uncertain": true,
+    "time": "2026-10-20 16:01:29"
+  },
+  {
+    "id": "ae31ef5a",
+    "text": "I will find you and hurt you.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.916,
+    "uncertain": false,
+    "time": "2026-10-20 16:01:29"
+  },
+  {
+    "id": "ac708a3e",
+    "text": "Great job breaking the only thing that was working.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.033,
+    "uncertain": false,
+    "time": "2026-10-20 16:01:29"
+  },
+  {
+    "id": "03328d92",
+    "text": "I absolutely love waiting an hour for a five-minute meeting.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "uncertain": false,
+    "time": "2026-10-20 16:01:29"
+  },
+  {
+    "id": "06b16e74",
+    "text": "What the hell are you talking about?",
+    "label": "uncertain",
+    "severity": "none",
+    "score": 0.0,
+    "uncertain": true,
+    "time": "2026-10-20 16:01:29"
+  },
+  {
+    "id": "c4bc34ca",
+    "text": "Haha, you call that a good presentation?",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "uncertain": false,
+    "time": "2026-10-20 16:01:29"
+  },
+  {
+    "id": "851f4fba",
+    "text": "Thank you for your wonderful help! Have a great day.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "uncertain": false,
+    "time": "2026-10-20 16:01:30"
+  },
+  {
+    "id": "39958dc5",
+    "text": "What the hell are you talking about?",
+    "label": "uncertain",
+    "severity": "none",
+    "score": 0.0,
+    "uncertain": true,
+    "time": "2026-10-20 16:01:30"
+  },
+  {
+    "id": "46a558fd",
+    "text": "I absolutely love waiting an hour for a five-minute meeting.",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "uncertain": false,
+    "time": "2026-10-20 16:01:30"
+  },
+  {
+    "id": "c2c50ee7",
+    "text": "I will find you and hurt you.",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.916,
+    "uncertain": false,
+    "time": "2026-10-20 16:01:30"
+  },
+  {
+    "id": "f5e19026",
+    "text": "What the hell are you talking about? [test_id_uncertain]",
+    "label": "uncertain",
+    "severity": "none",
+    "score": 0.0,
+    "uncertain": true,
+    "time": "2026-10-20 16:01:30"
+  },
+  {
+    "id": "old_rec_1",
+    "text": "old historic comment without uncertain field",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "time": "2026-01-01 10:00:00"
+  },
+  {
+    "id": "85b59e3c",
+    "text": "What the hell are you talking about?",
+    "label": "uncertain",
+    "severity": "none",
+    "score": 0.0,
+    "uncertain": true,
+    "time": "2026-10-20 16:02:44"
+  },
+  {
+    "id": "6e5f128a",
+    "text": "Thank you for your wonderful help! Have a great day.",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "uncertain": false,
+    "time": "2026-10-20 16:02:44"
+  },
+  {
+    "id": "d0457a93",
+    "text": "I disagree with you, but thanks for sharing your view",
+    "label": "safe",
+    "severity": "none",
+    "score": 0.0,
+    "uncertain": false,
+    "time": "2026-10-20 16:09:25"
+  },
+  {
+    "id": "0ba444e8",
+    "text": "Oh fantastic, another mandatory 8 AM meeting that definitely could have been an email",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "uncertain": false,
+    "time": "2026-10-20 16:10:31"
+  },
+  {
+    "id": "0e12af29",
+    "text": "What a complete loser, constantly crying online because you failed at life",
+    "label": "insult",
+    "severity": "medium",
+    "score": 0.984,
+    "uncertain": false,
+    "time": "2026-10-20 16:10:47"
+  },
+  {
+    "id": "2f9b7376",
+    "text": "What a complete loser, constantly crying online because you failed at life",
+    "label": "insult",
+    "severity": "medium",
+    "score": 0.984,
+    "uncertain": false,
+    "time": "2026-10-20 16:11:00"
+  },
+  {
+    "id": "e6932966",
+    "text": "You are so stupid and worthless, nobody likes you",
+    "label": "insult",
+    "severity": "medium",
+    "score": 0.96,
+    "uncertain": false,
+    "time": "2026-10-20 16:11:38"
+  },
+  {
+    "id": "a319a61c",
+    "text": "I will find you and make sure you regret opening your mouth",
+    "label": "threat",
+    "severity": "high",
+    "score": 0.981,
+    "uncertain": false,
+    "time": "2026-10-20 16:11:55"
+  },
+  {
+    "id": "9a9a50fe",
+    "text": "Oh fantastic, another mandatory 8 AM meeting that definitely could have been an email",
+    "label": "sarcasm",
+    "severity": "low",
+    "score": 0.013,
+    "uncertain": false,
+    "time": "2026-10-20 16:12:08"
   }
 ]
