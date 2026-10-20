@@ -5,49 +5,112 @@
 [![Tests](https://img.shields.io/badge/tests-38%20passed-brightgreen.svg)](tests/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-**CyberShield AI** is a real-time, multi-label cyberbullying detection and content moderation platform. It combines machine learning, safety-first escalation policies, autonomous agentic moderation pipelines, explainable AI, and interactive analytics to identify harassment, threats, insults, and sarcasm online.
+**CyberShield AI** is a real-time, multi-label cyberbullying detection and content moderation platform. It combines machine learning, safety-first escalation policies, an autonomous agentic moderation pipeline, explainable AI, and interactive analytics to identify harassment, threats, insults, and sarcasm online.
+
+---
+
+## 📐 System Architecture
+
+```mermaid
+graph TD
+    A["User Input / API Request"] --> B["Feature Extractor & Lexical Signals"]
+    B --> C["Sublinear TF-IDF Vectorizer"]
+    C --> D["Multi-Label Sigmoid Classifiers (6 Labels)"]
+    D --> E["Safety Policy & Contradiction Engine"]
+    
+    E --> F["Dual-Metric Evaluation"]
+    F --> F1["Label Confidence (Predicted Label %)"]
+    F --> F2["Harmfulness Score (Toxic/Threat/Insult/Obscene %)"]
+    
+    E --> G["Three-State Decision UI"]
+    G --> G1["✅ Safe (Confident Safe)"]
+    G --> G2["ℹ️ Inconclusive / Low Confidence (ALLOW_UNCERTAIN)"]
+    G --> G3["🚨/⚠️ Harmful (Threat / Sarcasm / Toxic / Insult)"]
+    
+    E --> H["4-Stage Agentic Pipeline"]
+    H --> H1["Human Review Escalation (Never Auto-ban)"]
+```
+
+---
+
+## 🔄 Decision & Uncertainty Flowchart
+
+The system separates classification probabilities, safety thresholds, and uncertainty handling to avoid false confidence claims on ambiguous inputs:
+
+```mermaid
+flowchart TD
+    Start["Incoming Comment"] --> Ext["Extract Unigrams, Bigrams & Sarcasm Cues"]
+    Ext --> Predict["Predict 6 Label Probabilities"]
+    
+    Predict --> CheckThresh{"Any Label >= Threshold?"}
+    
+    CheckThresh -- "Yes" --> HarmfulCheck{"Which Label Crossed?"}
+    HarmfulCheck -- "Threat >= 0.35" --> ThreatAct["Verdict: 'threat' | High Severity\nPolicy: Human Review (Never Auto-ban)"]
+    HarmfulCheck -- "Sarcasm >= 0.35" --> SarcasmAct["Verdict: 'sarcasm' | Low Severity\nPolicy: Allow with Context (Non-toxic)"]
+    HarmfulCheck -- "Toxic / Insult / Obscene" --> ModAct["Verdict: Category | Medium/High Severity\nPolicy: Suggest Polite Rewrite / Warn"]
+    HarmfulCheck -- "Safe only" --> ConfSafe["Verdict: ✅ Safe\nPolicy: Allow Immediately"]
+    
+    CheckThresh -- "No" --> SafeProbCheck{"Safe Probability > 0.30?"}
+    SafeProbCheck -- "Yes" --> ConfSafe
+    SafeProbCheck -- "No" --> Inconclusive["Verdict: ℹ️ Inconclusive / Low Confidence\nPolicy: ALLOW_UNCERTAIN (No Auto-penalty)"]
+```
+
+---
+
+## 🤖 4-Stage Agentic Moderation Pipeline
+
+For high-risk or ambiguous content, CyberShield AI activates an autonomous 4-stage pipeline for contextual analysis and transparent reasoning:
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as User / Platform
+    participant A as Stage 1: Content Analysis
+    participant B as Stage 2: Context & Threat Review
+    participant C as Stage 3: Policy Decision
+    participant D as Stage 4: Explanation & Action Plan
+
+    User->>A: Raw Comment Text
+    A->>B: Multi-Label Vector + Lexical Signals
+    Note over B: Evaluates idioms, stalking signals & target specificity
+    B->>C: Verified Risk Profile
+    Note over C: Resolves contradictions & assigns policy directive
+    C->>D: Action Directive (ALLOW / ESCALATE / REWRITE)
+    D-->>User: Structured Verdict + Safer Rewrite
+```
 
 ---
 
 ## 🌟 Key Capabilities
 
-- **6-Label Multi-Label Schema**: Predicts probabilities independently across six distinct labels:
-  1. `safe` — Constructive, polite, or harmless discourse.
-  2. `toxic` — Rude, hostile, or disrespectful language.
-  3. `insult` — Demeaning, mocking, or degrading attacks.
-  4. `threat` — Physical harm, conditional violence, or stalking threats.
-  5. `obscene` — Vulgar or profane language.
-  6. `sarcasm` — Passive-aggressive, ironic, or mocking tone.
-- **Sarcasm vs. Toxicity Disentanglement**: Sarcasm is modeled independently from toxicity (`sarcasm != toxic`). Benign irony (e.g. *"I love waiting an hour for a five-minute meeting"*) is correctly flagged as low severity without triggering false toxicity punishments.
-- **Safety-First Threat Policy**: Threat recall threshold is tuned to `0.35`. Potential threats are escalated for human moderation review (`FLAG_FOR_HUMAN_REVIEW`) and never trigger automatic punitive bans.
-- **Auxiliary Context & Idiom Guardrails**: Contextual idioms containing violent words (e.g., *"kill time"*, *"battery is dying"*, *"died laughing"*) are recognized as non-threatening context.
+- **6-Label Multi-Label Schema**: Predicts independent probabilities for `safe`, `toxic`, `insult`, `threat`, `obscene`, and `sarcasm`.
+- **Sarcasm vs. Toxicity Disentanglement**: Sarcasm is strictly decoupled from toxicity (`sarcasm != toxic`). Benign irony receives low severity without triggering toxicity penalties.
+- **Safety-First Threat Policy**: Threat recall threshold is tuned to `0.35`. Threats trigger human moderation review (`FLAG_FOR_HUMAN_REVIEW`) and never automatic punitive bans.
+- **Non-Threat Idiom Filters**: Idioms with violent words (e.g. *"kill time"*, *"battery is dying"*, *"died laughing"*) are recognized as benign idioms.
 - **Dual-Metric Clarity**:
-  - **Label confidence**: The probability of the predicted category (e.g. `90%` for sarcasm).
-  - **Harmfulness score**: The highest probability among harmful categories (`threat`, `toxic`, `insult`, `obscene`), displaying `0%` for safe comments and residual toxicity (1%–3%) for benign sarcasm.
-- **Inconclusive / Low-Confidence Handling**: When no category crosses threshold and safe probability is low, the system assigns `uncertain` with an informational neutral badge (`ℹ️ Inconclusive / Low Confidence`), ensuring zero false claims of confidence.
-- **Agentic Moderation Pipeline (Phase 3)**: A 4-stage autonomous pipeline executing deep content analysis, risk appraisal, policy enforcement, and audit reasoning.
-- **Word-Level Attribution & Safer Rewrites**: Highlights flagged lexical tokens and provides polite, constructive alternative rewrites.
-- **Zero Binary Dependency**: Fast, pure Python inference using sublinear TF-IDF + Sigmoid logits with zero external binary or C++ runtime dependencies.
-- **Zero-Downtime Rollback**: Instant rollback to the legacy V1 model via the `CYBERSHIELD_MODEL_VERSION=v1` environment variable.
+  - **Label confidence**: Classification probability of the predicted category (e.g. `90%` for sarcasm).
+  - **Harmfulness score**: Strongest score among harmful categories (`threat`, `toxic`, `insult`, `obscene`), displaying `0%` for safe items and `1%`–`3%` for benign sarcasm.
+- **Inconclusive Handling**: When no label crosses threshold and safe probability is low, the UI assigns an informational neutral badge (`ℹ️ Inconclusive / Low Confidence`) rather than a misleading green checkmark.
+- **Word-Level Attribution & Safer Rewrites**: Highlights flagged tokens and generates constructive alternative rewrites.
+- **Zero Binary Dependencies**: Pure Python inference using sublinear TF-IDF + Sigmoid logits with zero external binary or C++ runtime dependencies.
+- **Zero-Downtime Rollback**: Instant rollback to the legacy V1 model via `CYBERSHIELD_MODEL_VERSION=v1`.
 
 ---
 
-## 🏗️ Project Architecture
+## 🏗️ Project Structure
 
 ```
 cybershield-ai/
-├── app.py                      # Flask web application & REST API routes
-├── predictor.py                # High-level inference engine & decision policies
-├── agent.py                    # 4-stage autonomous agentic moderation pipeline
+├── app.py                      # Flask web application & REST API
+├── predictor.py                # Inference engine & decision policies
+├── agent.py                    # 4-stage autonomous moderation pipeline
 ├── train_multi_label.py        # Reproducible training pipeline for Model V2
-├── validate_dataset.py         # Dataset schema, label balance, and matrix validator
-├── build_dataset_v2.py         # Dataset builder & synthesizer for Model V2
+├── validate_dataset.py         # Dataset schema and matrix validator
 ├── requirements.txt            # Python dependencies
 │
 ├── data/
 │   ├── synthetic_comments_v2.json  # Multi-label dataset (V2 training data)
-│   ├── synthetic_comments.json     # Baseline dataset (V1)
-│   ├── history.json                # Persisted moderation activity log
+│   ├── history.json                # Moderation activity log
 │   └── dataset_quality_report_v2.md# Dataset quality & balance report
 │
 ├── model/
@@ -61,64 +124,49 @@ cybershield-ai/
 │       └── dashboard.js        # Analytics charts and activity table
 │
 ├── templates/
-│   ├── base.html               # Shared navigation, styling, and layout shell
-│   ├── index.html              # Landing page and platform features
-│   ├── analyzer.html           # Live comment analyzer & agent pipeline UI
-│   └── dashboard.html          # Analytics dashboard & metrics overview
+│   ├── index.html              # Landing page
+│   ├── analyzer.html           # Live text analyzer & agent UI
+│   └── dashboard.html          # Analytics dashboard
 │
 └── tests/
-    ├── test_dataset_validation.py  # Dataset schema & vector mapping tests (12 tests)
-    └── test_multi_label_model.py   # Predictor, Flask API, and regression tests (26 tests)
+    ├── test_dataset_validation.py  # Dataset schema tests (12 tests)
+    └── test_multi_label_model.py   # Predictor & API regression tests (26 tests)
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
-### 1. Prerequisites
-- Python 3.10 or higher
-- Git
-
-### 2. Clone the Repository
+### 1. Clone & Setup
 ```bash
 git clone https://github.com/pradnya-182006/cybershield-ai.git
 cd cybershield-ai
-```
 
-### 3. Create a Virtual Environment
-```bash
-# Windows
+# Create & activate virtual environment
 python -m venv .venv
-.venv\Scripts\activate
+.venv\Scripts\activate      # On Windows
+source .venv/bin/activate   # On macOS/Linux
 
-# macOS / Linux
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-### 4. Install Dependencies
-```bash
+# Install dependencies
 pip install -r requirements.txt
 pip install pytest
 ```
 
-### 5. Start the Application
+### 2. Run the App
 ```bash
 python app.py
 ```
+Open **`http://127.0.0.1:5000`** in your browser.
 
-The application will start on **`http://127.0.0.1:5000`**.
-
-- **Home**: `http://127.0.0.1:5000/`
-- **Text Analyzer**: `http://127.0.0.1:5000/analyzer`
-- **Analytics Dashboard**: `http://127.0.0.1:5000/dashboard`
+- **Analyzer**: `http://127.0.0.1:5000/analyzer`
+- **Dashboard**: `http://127.0.0.1:5000/dashboard`
 
 ---
 
 ## 📡 API Reference
 
-### 1. Analyze Text
-**Endpoint:** `POST /api/analyze`
+### Analyze Text
+`POST /api/analyze`
 
 **Request:**
 ```json
@@ -134,7 +182,6 @@ The application will start on **`http://127.0.0.1:5000`**.
   "label_confidence": 0.9018,
   "harmfulness_score": 0.013,
   "severity": "low",
-  "confidence": 0.8,
   "uncertain": false,
   "predicted_labels": ["sarcasm"],
   "scores": {
@@ -157,61 +204,18 @@ The application will start on **`http://127.0.0.1:5000`**.
 }
 ```
 
-### 2. Autonomous Agent Pipeline
-**Endpoint:** `POST /api/agent`
-
-**Request:**
-```json
-{
-  "text": "You are an absolute idiot and I will find your street."
-}
-```
-
-Runs the 4-stage pipeline:
-1. `Content Analysis`: Ingests multi-label probabilities and lexical signals.
-2. `Context & Threat Review`: Evaluates conditional threats, idioms, and target specificity.
-3. `Policy Decision`: Executes resolution logic and sets action priority (`FLAG_FOR_HUMAN_REVIEW`).
-4. `Explanation & Action Plan`: Generates human-readable rationale and suggested interventions.
-
-### 3. Historical Analytics & Logs
-- `GET /api/stats` — Summary metrics (total, harmful %, safe %, severity distribution, 7-day trend).
-- `GET /api/history` — Returns the 50 most recent moderation records.
-- `DELETE /api/history` — Clears activity logs.
+### Run Agent Pipeline
+`POST /api/agent` (Runs the full 4-stage contextual analysis and returns stage timings, policy decisions, and audit trail).
 
 ---
 
 ## 🧪 Testing
 
-The repository includes a comprehensive 38-test automated suite covering dataset integrity, inference consistency, threat detection, sarcasm separation, uncertainty preservation, and Flask endpoints.
-
-Run the test suite:
+Run the automated test suite:
 ```bash
 python -m pytest -v
 ```
-
-Expected output:
-```text
-============================= test session starts =============================
-collected 38 items
-
-tests/test_dataset_validation.py (12 passed)
-tests/test_multi_label_model.py (26 passed)
-
-============================= 38 passed in 13.5s ==============================
-```
-
----
-
-## 🔄 Rollback Mechanism
-
-CyberShield AI supports zero-downtime rollback to the legacy V1 model:
-
-```bash
-# Run with legacy V1 model
-CYBERSHIELD_MODEL_VERSION=v1 python app.py
-```
-
-The system automatically switches weight matrices, label spaces, and feature extraction to the legacy Kaggle-compatible schema without throwing dictionary or index exceptions.
+All **38 test cases** pass across dataset validation, multi-label inference, threat recall, sarcasm separation, and uncertainty preservation.
 
 ---
 
